@@ -3,45 +3,229 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thiera</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Thiera - Tea Extraction Perfume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+    <!-- Background Scenery inspired by the tea mountains & botanicals in Thiera perfume packaging -->
+    <div class="bg-scenery" aria-hidden="true">
+      <!-- Ambient light glow -->
+      <div class="bg-glow"></div>
+
+      <!-- Botanical Tea Leaves & Blossom - Top Left Branch -->
+      <svg class="botanical-art branch-left" viewBox="0 0 320 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="leafGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#4E6746" />
+            <stop offset="60%" stop-color="#364930" />
+            <stop offset="100%" stop-color="#243320" />
+          </linearGradient>
+          <linearGradient id="leafGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#6F8865" />
+            <stop offset="70%" stop-color="#4B6344" />
+            <stop offset="100%" stop-color="#34472F" />
+          </linearGradient>
+          <linearGradient id="leafHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#93AB88" stop-opacity="0.6" />
+            <stop offset="100%" stop-color="#556E4E" stop-opacity="0.1" />
+          </linearGradient>
+        </defs>
+
+        <!-- Main Botanical Branch -->
+        <path d="M-20,440 C30,360 70,260 110,160 C130,110 160,50 200,-10" stroke="#3F4F39" stroke-width="4.5" stroke-linecap="round" />
+        <path d="M110,160 C150,140 210,150 260,180" stroke="#485A42" stroke-width="3" stroke-linecap="round" />
+        <path d="M70,260 C30,220 -10,230 -50,250" stroke="#485A42" stroke-width="3" stroke-linecap="round" />
+        <path d="M140,95 C190,70 240,80 280,105" stroke="#485A42" stroke-width="2.5" stroke-linecap="round" />
+
+        <!-- Tea Leaves with Organic Veins -->
+        <!-- Leaf 1 (Top right) -->
+        <path d="M200,-10 C240,10 270,60 250,100 C230,120 180,100 170,60 C165,35 180,5 200,-10 Z" fill="url(#leafGrad1)" />
+        <path d="M185,25 C215,55 240,75 245,95" stroke="#7E9B73" stroke-width="1.5" stroke-linecap="round" opacity="0.7" />
+
+        <!-- Leaf 2 (Upper branch right) -->
+        <path d="M280,105 C330,115 350,160 320,195 C280,210 240,185 240,140 C240,120 260,110 280,105 Z" fill="url(#leafGrad2)" />
+        <path d="M260,125 C285,150 305,170 315,185" stroke="#A0BC95" stroke-width="1.5" stroke-linecap="round" opacity="0.6" />
+
+        <!-- Leaf 3 (Mid right) -->
+        <path d="M260,180 C310,200 320,250 290,285 C250,295 210,260 220,215 C225,190 245,180 260,180 Z" fill="url(#leafGrad1)" />
+        <path d="M240,200 C270,230 285,255 285,275" stroke="#7E9B73" stroke-width="1.5" stroke-linecap="round" opacity="0.7" />
+
+        <!-- Leaf 4 (Inner mid) -->
+        <path d="M110,160 C120,100 80,60 40,75 C10,95 25,150 70,165 C85,170 100,165 110,160 Z" fill="url(#leafGrad2)" />
+        <path d="M80,155 C55,135 40,115 35,90" stroke="#93AB88" stroke-width="1.5" stroke-linecap="round" opacity="0.6" />
+
+        <!-- Leaf 5 (Lower left) -->
+        <path d="M70,260 C60,200 10,175 -30,190 C-60,215 -50,270 -5,285 C30,295 60,280 70,260 Z" fill="url(#leafGrad1)" />
+
+        <!-- Tea Flower Blossom (White flower with golden pistils like on bottle label) -->
+        <g class="tea-blossom" transform="translate(130, 130)">
+          <!-- Petals -->
+          <ellipse cx="0" cy="-22" rx="16" ry="20" fill="#FCFAF2" stroke="#DED4C0" stroke-width="1" />
+          <ellipse cx="20" cy="-10" rx="15" ry="19" transform="rotate(35 20 -10)" fill="#F9F6EA" stroke="#DED4C0" stroke-width="1" />
+          <ellipse cx="18" cy="16" rx="16" ry="19" transform="rotate(80 18 16)" fill="#FAF7EC" stroke="#DED4C0" stroke-width="1" />
+          <ellipse cx="-12" cy="18" rx="16" ry="19" transform="rotate(-60 -12 18)" fill="#F8F4E6" stroke="#DED4C0" stroke-width="1" />
+          <ellipse cx="-20" cy="-8" rx="15" ry="19" transform="rotate(-30 -20 -8)" fill="#FDFBF5" stroke="#DED4C0" stroke-width="1" />
+          
+          <!-- Golden Stamens -->
+          <circle cx="0" cy="0" r="10" fill="#E6BE65" opacity="0.9" />
+          <circle cx="-4" cy="-3" r="2.5" fill="#D39F35" />
+          <circle cx="3" cy="-4" r="2.5" fill="#D39F35" />
+          <circle cx="-3" cy="4" r="2" fill="#BA8524" />
+          <circle cx="4" cy="3" r="2" fill="#BA8524" />
+          <circle cx="0" cy="0" r="3" fill="#FFE38F" />
+        </g>
+      </svg>
+
+      <!-- Botanical Tea Leaves - Bottom Right Branch -->
+      <svg class="botanical-art branch-right" viewBox="0 0 300 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M320,380 C270,300 230,220 180,140 C140,80 100,30 40,-10" stroke="#3F4F39" stroke-width="4" stroke-linecap="round" />
+        <path d="M180,140 C130,160 80,140 30,110" stroke="#485A42" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M230,220 C270,250 300,230 340,210" stroke="#485A42" stroke-width="2.5" stroke-linecap="round" />
+
+        <path d="M40,-10 C0,10 -20,60 5,95 C35,110 80,85 85,45 C90,20 65,0 40,-10 Z" fill="url(#leafGrad1)" />
+        <path d="M30,110 C-15,120 -35,165 -5,195 C30,210 75,180 70,140 C70,120 50,110 30,110 Z" fill="url(#leafGrad2)" />
+        <path d="M180,140 C170,80 210,40 250,55 C280,75 270,130 220,145 C205,150 190,145 180,140 Z" fill="url(#leafGrad1)" />
+      </svg>
+
+      <!-- Misty Mountain & Tea Plantation Landscape at the Bottom -->
+      <div class="misty-hills-wrap">
+        <svg class="tea-hills-svg" viewBox="0 0 1440 450" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="hillDistant" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#BACBB3" stop-opacity="0.35" />
+              <stop offset="60%" stop-color="#C5D3BF" stop-opacity="0.5" />
+              <stop offset="100%" stop-color="#E8E2D2" stop-opacity="0.8" />
+            </linearGradient>
+            <linearGradient id="hillMid" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#8DA484" stop-opacity="0.55" />
+              <stop offset="50%" stop-color="#738D6A" stop-opacity="0.65" />
+              <stop offset="100%" stop-color="#B2C2AC" stop-opacity="0.85" />
+            </linearGradient>
+            <linearGradient id="hillClose" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#556F4E" stop-opacity="0.75" />
+              <stop offset="45%" stop-color="#465D40" stop-opacity="0.85" />
+              <stop offset="100%" stop-color="#344830" stop-opacity="0.95" />
+            </linearGradient>
+            <linearGradient id="mistOverlay" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#F7F3EA" stop-opacity="0" />
+              <stop offset="50%" stop-color="#F2ECE0" stop-opacity="0.4" />
+              <stop offset="100%" stop-color="#ECE3D1" stop-opacity="0.9" />
+            </linearGradient>
+          </defs>
+
+          <!-- Mountain Ridge 1 (Furthest misty peaks) -->
+          <path d="M0,160 C180,100 360,180 540,120 C720,70 920,160 1100,110 C1280,70 1380,130 1440,120 L1440,450 L0,450 Z" fill="url(#hillDistant)" />
+
+          <!-- Mountain Ridge 2 (Mid-range rolling tea hills) -->
+          <path d="M0,230 C220,170 420,240 650,190 C880,140 1080,230 1260,180 C1360,160 1410,210 1440,200 L1440,450 L0,450 Z" fill="url(#hillMid)" />
+
+          <!-- Mountain Ridge 3 (Foreground undulating tea plantation slopes) -->
+          <path d="M0,310 C180,270 380,330 600,280 C840,240 1020,310 1240,270 C1360,250 1410,280 1440,270 L1440,450 L0,450 Z" fill="url(#hillClose)" />
+
+          <!-- Bottom soft mist blend -->
+          <rect x="0" y="240" width="1440" height="210" fill="url(#mistOverlay)" />
+        </svg>
+      </div>
+
+      <!-- Subtle Tea Paper Texture Grain Overlay -->
+      <div class="paper-texture"></div>
+    </div>
+
+    <!-- Main Card Container formatted like the Thiera Perfume Label -->
+    <main class="container">
+      <!-- Decorative vintage frame corners -->
+      <div class="frame-corner top-left"></div>
+      <div class="frame-corner top-right"></div>
+      <div class="frame-corner bottom-left"></div>
+      <div class="frame-corner bottom-right"></div>
+
+      <!-- Brand Seal / Emblem (Three Tea Leaves like on the perfume bottle) -->
+      <div class="brand-seal">
+        <svg viewBox="0 0 60 50" class="tea-leaves-icon" aria-hidden="true">
+          <!-- Center leaf -->
+          <path d="M30,3 C38,15 39,28 30,38 C21,28 22,15 30,3 Z" fill="#3D5037" />
+          <path d="M30,12 L30,34" stroke="#688061" stroke-width="1.2" stroke-linecap="round" />
+          <!-- Left leaf -->
+          <path d="M26,24 C14,18 4,24 6,34 C16,38 24,31 26,24 Z" fill="#4B6044" />
+          <!-- Right leaf -->
+          <path d="M34,24 C46,18 56,24 54,34 C44,38 36,31 34,24 Z" fill="#4B6044" />
+          <!-- Stem -->
+          <path d="M30,38 Q30,44 29,48" stroke="#3D5037" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </div>
+
+      <!-- Avatar Logo container (preserved for custom photo/logo) -->
       <div class="avatar">
-        <img src="https://via.placeholder.com/100" alt="Logo" />
+        <img
+          src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=200&q=80"
+          alt="Thiera Logo"
+          onerror="this.style.display='none'"
+        />
       </div>
-      <h2>Thiera</h2>
-      <p class="tagline">Parfum Sepatu dari Daun Teh</p>
 
-      <div class="links">
-        <a href="https://shopee.co.id/USERNAME_SHOPEE" class="link-item">
-          <img
-            src="https://i.pinimg.com/1200x/b4/32/2a/b4322a7d2808dcde24b34cd70a497170.jpg"
-            alt="Shopee"
-          />
-          Shopee Kamu
+      <header class="brand-header">
+        <h1 class="brand-name">Thiera</h1>
+        <p class="brand-sub">TEA EXTRACTION PERFUME</p>
+        
+        <div class="vintage-divider">
+          <span class="line"></span>
+          <span class="diamond">◆</span>
+          <span class="line"></span>
+        </div>
+
+        <p class="script-title">Shoes Parfume</p>
+        <p class="essence-text">The calm essence of nature</p>
+        <p class="tagline">Parfum Sepatu dari Daun Teh</p>
+      </header>
+
+      <section class="links" aria-label="Tautan Toko dan Kontak">
+        <a
+          href="https://shopee.co.id/USERNAME_SHOPEE"
+          class="link-item"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="icon-wrap shopee-wrap">
+            <img
+              src="https://i.pinimg.com/1200x/b4/32/2a/b4322a7d2808dcde24b34cd70a497170.jpg"
+              alt="Shopee"
+            />
+          </span>
+          <span class="link-text">Shopee Official</span>
+          <span class="link-arrow">→</span>
         </a>
 
-        <a href="https://wa.me/6282230942125" class="link-item">
-          <img
-            src="https://i.pinimg.com/736x/b1/a6/7d/b1a67d9315a05ed2f49326ef6bdc0fd5.jpg"
-            alt="WhatsApp"
-          />
-          Chat Admin
+        <a
+          href="https://wa.me/6282230942125"
+          class="link-item"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="icon-wrap wa-wrap">
+            <img
+              src="https://i.pinimg.com/736x/b1/a6/7d/b1a67d9315a05ed2f49326ef6bdc0fd5.jpg"
+              alt="WhatsApp"
+            />
+          </span>
+          <span class="link-text">Chat Admin WhatsApp</span>
+          <span class="link-arrow">→</span>
         </a>
-      </div>
+      </section>
 
       <footer>
-        <div class="socials">
+        <div class="socials" aria-label="Media Sosial">
           <a
             href="https://www.instagram.com/USERNAME_IG/"
             target="_blank"
-            class="link-item"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="Instagram"
           >
             <img
               src="https://i.pinimg.com/1200x/18/af/2e/18af2ea9a8d8ca59415534a73f695deb.jpg"
@@ -50,8 +234,10 @@
           </a>
           <a
             href="https://www.tiktok.com/@USERNAME_TT"
-            class="link-item"
+            class="social-link"
             target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
           >
             <img
               src="https://i.pinimg.com/1200x/e4/15/d6/e415d6bd27900cc066d0b8b23a7f1055.jpg"
@@ -59,8 +245,8 @@
             />
           </a>
         </div>
-        <p>Thiera &copy; 2026</p>
+        <p class="copyright">Thiera &copy; 2026 &bull; Natural Tea Essence</p>
       </footer>
-    </div>
+    </main>
   </body>
 </html>
